@@ -1,6 +1,0 @@
-package com.avinash.springboot.microservice;
-
-@FeignClinet
-public interface CurrencyExchangeServiceProxy {
-
-}

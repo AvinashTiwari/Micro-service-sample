@@ -1,0 +1,29 @@
+package com.avinash.springboot.microservice;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.avinash.springboot.microservice.bean.LimitConfiguration;
+import com.avinash.springboot.microservice.component.ConfigurationApplicationProp;
+
+@RestController
+public class LimitConfigurationController {
+
+	@Autowired
+	private ConfigurationApplicationProp configurationApplicationProp;
+	
+	@GetMapping("/limits")
+	public LimitConfiguration retrieveLimitFromConfigurations() {
+		return new LimitConfiguration(configurationApplicationProp.getMaximum(),
+				configurationApplicationProp.getMinimum());
+	}
+	
+	@GetMapping("/fault-tolerance-example")
+	public LimitConfiguration retriveConfiguration()
+	{
+		throw new RuntimeException("")
+	}
+	
+}

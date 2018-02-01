@@ -1,5 +1,0 @@
-package com.avinash.springboot.microservice;
-
-public class ReactorAutoConfiguration {
-
-}
