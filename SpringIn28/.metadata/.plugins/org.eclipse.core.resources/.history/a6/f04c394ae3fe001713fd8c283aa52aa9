@@ -1,0 +1,8 @@
+package com.avinash.springboot.microservice;
+
+import org.springframework.cloud.netflix.feign.FeignClient;
+
+@FeignClient(name="")
+public interface CurrencyExchangeServiceProxy {
+
+}

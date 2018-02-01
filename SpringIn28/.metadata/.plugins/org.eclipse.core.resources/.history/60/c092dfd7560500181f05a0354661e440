@@ -1,0 +1,16 @@
+package com.avinash.springboot.microservice;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.reactor.core.ReactorCoreAutoConfiguration;
+import org.springframework.context.annotation.ComponentScan;
+
+@EnableZipkinServer
+@SpringBootApplication
+public class ZipkinDistributedTracingServerApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ZipkinDistributedTracingServerApplication.class, args);
+	}
+}
